@@ -1,0 +1,11 @@
+@mixin font-logo {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin font-default {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin button-color {
+    background: linear-gradient($color-secondary, $color-primary);
+}

@@ -1,0 +1,9 @@
+.purple-button {
+    display: block;
+    @include button-color;
+    width: fit-content;
+    padding: $button-padding;
+    border-radius: $button-padding * 2;
+    box-shadow: 4px 4px 4px $color-background-medium;
+    color: white;
+}

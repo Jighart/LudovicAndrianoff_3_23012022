@@ -1,0 +1,34 @@
+.restaurants__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: $card-height;
+    margin-bottom: 2em;
+    &--img {
+        overflow: hidden;
+        border-radius: 1em 1em 0 0;
+        width: 100%;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &--bottom {
+        width: 100%;
+        background-color: white;
+        padding: 1em;
+        border-radius: 0 0 1em 1em;
+        display: flex;
+        align-items: center;
+        justify-items: space-between;
+        &-text {
+            font-size: 0.9em;
+            margin: 0;
+            width: 85%;
+        }
+        &-icon {
+            font-size: 1.5em;
+        }
+    }
+}

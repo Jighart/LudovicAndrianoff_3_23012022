@@ -1,0 +1,52 @@
+h2 {
+    margin-bottom: 1em;
+}
+
+.title {
+    text-align: center;
+    background-color: $color-background-light;
+    &__byline {
+        margin-bottom: 2em;
+    }
+}
+
+.title, .fonctionnement {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 10px;
+    & li {
+        counter-increment: item;
+        background-color: $color-background-light;
+        padding: 1em 0;
+        margin-bottom: 1.5em;
+        border-radius: 1em;
+        box-shadow: 4px 4px 4px lightgrey;
+        & .fas {
+            position: relative;
+            right: 0.8em;
+        }
+    }
+    & li:before {
+        position: relative;
+        margin-right: 1em;
+        padding: 0.1em;
+        content: counter(item);
+        background: $color-primary;
+        border-radius: 100%;
+        color: white;
+        width: 1.2em;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        left: -0.6em;
+    }
+} 
+
+.restaurants {
+    background-color: $color-background-light;
+}
