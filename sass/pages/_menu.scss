@@ -1,0 +1,34 @@
+.menu-background {
+        background-color: $color-background-light;
+}
+
+.menu-banner {
+    overflow: hidden;
+    width: 100%;
+    height: $banner-height;
+    & img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        /*bottom: 20px;
+        position: relative;*/
+    }
+}
+
+.menu-title {
+    width: 100%;
+    display: flex;
+    position: relative;
+    bottom: 2em;
+    border-radius: 1em 1em 0 0;
+    background-color: $color-background-light;
+    > h1 {
+        margin: 0 0 0 0.5em;
+        width: 75%;
+        font-weight: 500;
+    }
+    > .far {
+        font-size: 1.5em;
+        align-self: center;
+    }
+}

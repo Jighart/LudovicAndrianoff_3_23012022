@@ -9,3 +9,7 @@
 @mixin button-color {
     background: linear-gradient($color-secondary, $color-primary);
 }
+
+@mixin button-color-hover {
+    background: linear-gradient(lighten($color-secondary, 10%), lighten($color-primary, 10%));
+}

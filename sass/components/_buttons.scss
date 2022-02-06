@@ -3,7 +3,11 @@
     @include button-color;
     width: fit-content;
     padding: $button-padding;
-    border-radius: $button-padding * 2;
-    box-shadow: 4px 4px 4px $color-background-medium;
+    border-radius: nth($button-padding, 1) * 2;
+    box-shadow: 4px 4px 4px darken($color-background-light, 25%);
     color: white;
+    &:hover {
+        @include button-color-hover;
+        box-shadow: 4px 4px 4px lighten($color-secondary, 10%);
+    }
 }
