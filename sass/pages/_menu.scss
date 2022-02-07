@@ -9,9 +9,15 @@
     & img {
         width: 100%;
         object-fit: cover;
-        object-position: center;
-        /*bottom: 20px;
+        /*object-position: center;
+        bottom: 20px;
         position: relative;*/
+    }
+    @include tablet-version {
+        height: $banner-height * 1.5;
+    }
+    @include desktop-version {
+        height: $banner-height * 2;
     }
 }
 
@@ -24,8 +30,14 @@
     background-color: $color-background-light;
     > h1 {
         margin: 0 0 0 0.5em;
-        width: 75%;
+        width: 85%;
         font-weight: 500;
+        @include desktop-version {
+            width: 90%;
+            text-align: center;
+            position: relative;
+            left: 5%;
+        }
     }
     > .far {
         font-size: 1.5em;

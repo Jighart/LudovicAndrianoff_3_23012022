@@ -18,4 +18,21 @@ footer {
             }
         }
     }
+
+    @include desktop-version {
+        font-size: 1.2em;
+        & .logo {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        & ul {
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            & li {
+                width: unset;
+                justify-content: center;
+            }
+        }
+    }
 }

@@ -1,9 +1,15 @@
 .menu-list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     position: relative;
     bottom: 2em;
+    &-section {
+        width: 100%;
+        @include desktop-version {
+            width: 30%;
+            font-size: 0.9em;
+        }
+    }
     h2 {
         display:block;
         width: 100%;
@@ -66,6 +72,9 @@
             line-height: 70px;
             background-color: $color-tertiary;
             border-radius: 0 1em 1em 0;
+            @include desktop-version {
+                line-height: 60px;
+            }
             > .fas {
                 background-color: white;
                 padding: 0.2em;

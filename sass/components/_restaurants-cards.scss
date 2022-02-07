@@ -31,4 +31,8 @@
             font-size: 1.5em;
         }
     }
+
+    @include desktop-version {
+        height: $card-height * 1.4;
+    }
 }

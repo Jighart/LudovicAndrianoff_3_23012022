@@ -3,8 +3,15 @@
     margin: 0 auto;
 }
 
+body {
+    @include desktop-version {
+        max-width: 1400px;
+    }
+}
+
 a, address {
 	text-decoration: none;
     font-style: normal;
 	color: inherit;
 }
+

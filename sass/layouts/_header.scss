@@ -1,6 +1,7 @@
 .header {
     text-align: center;
     vertical-align: middle;
+    position: relative;
     &__logo {
         font-size: 2em;
         height: 2em;
@@ -25,7 +26,7 @@
         font-size: 1.5em;
         position: absolute;
         top: 0.75em;
-        left: 1em;
+        left: 2em;
     }
 }
 

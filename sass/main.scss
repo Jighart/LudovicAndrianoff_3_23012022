@@ -6,11 +6,11 @@
 
 @import './components/buttons';
 @import './components/restaurants-cards';
-@import './components/menu-list';
 
 @import "./layouts/container";
 @import "./layouts/header";
 @import "./layouts/footer";
+@import './layouts/menu-list';
 
-@import "./pages/main";
+@import "./pages/index";
 @import "./pages/menu";
