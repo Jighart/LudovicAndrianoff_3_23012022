@@ -1,0 +1,36 @@
+.menu-list__entry {
+    &--checkmark {
+        text-align: center;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding: 0 1em;
+        align-items: center;
+        color: $color-tertiary;
+        background-color: $color-tertiary;
+        border-radius: 0 1em 1em 0;
+        transform: translateX(4em);
+        i {
+            background-color: white;
+            padding: 0.2em;
+            border-radius: 100%;
+            transform: rotate(0deg);
+        }
+    }
+    &:hover {
+        .menu-list__entry--checkmark {
+            transform: translateX(0);
+            transition: transform 500ms;
+            i {
+            transform: rotate(360deg);
+            transition: transform 500ms 100ms;
+            }
+        }
+        .menu-list__entry--description-byline {
+            margin-right: 3em;
+            transition: margin-right 500ms;
+        }
+    }
+}    

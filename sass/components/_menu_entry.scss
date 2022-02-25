@@ -1,0 +1,68 @@
+.menu-list {
+    &__entry {
+    background-color: white;
+    margin-bottom: 0.75em;
+    border-radius: 1.2em;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    height: 70px;
+    @include desktop-version {
+        height: 60px;
+    }
+    &--description {
+        padding: 1em;
+        flex-grow: 1;
+        font-size: 0.9em;
+        min-width: 0;
+        &-title {
+            > h3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }                    
+        }
+        &-byline {
+            display: flex;
+            justify-content: space-between;
+            min-width: 0;
+            margin-right: 0;
+            > p {
+                margin: 0.2em 0 0 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 2em;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 5 {
+    .menu-entrees > .menu-list__entry:nth-of-type(#{$i}) {
+        animation: fadein #{$i}s;
+    }
+    .menu-plats > .menu-list__entry:nth-of-type(#{$i}) {
+        animation: fadein #{$i+3}s;
+    }
+    .menu-desserts > .menu-list__entry:nth-of-type(#{$i}) {
+        animation: fadein #{$i+6}s;
+    }
+}

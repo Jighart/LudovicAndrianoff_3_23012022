@@ -8,6 +8,6 @@
     color: white;
     &:hover {
         @include button-color-hover;
-        box-shadow: 4px 4px 4px lighten($color-secondary, 10%);
+        box-shadow: 6px 6px 6px lighten($color-secondary, 10%);
     }
 }
