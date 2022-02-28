@@ -28,6 +28,10 @@
             transition: transform 500ms 100ms;
             }
         }
+        .menu-list__entry--description-title {
+            margin-right: 3em;
+            transition: margin-right 500ms;
+        }
         .menu-list__entry--description-byline {
             margin-right: 3em;
             transition: margin-right 500ms;
