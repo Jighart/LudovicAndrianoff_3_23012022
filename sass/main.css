@@ -105,12 +105,14 @@ a, address {
 }
 
 .fa-heart:hover {
-  -webkit-animation: fill 0.2s ease-out;
-          animation: fill 0.2s ease-out;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
-  background: linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-animation: fill 0.5s ease-out;
+          animation: fill 0.5s ease-out;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 @-webkit-keyframes fill {
@@ -137,6 +139,111 @@ a, address {
   }
 }
 
+#loader {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 300vw;
+  background: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 300%;
+}
+
+#loader .logo {
+  position: relative;
+  bottom: 60vw;
+}
+
+#loader .fa-spinner {
+  position: relative;
+  -webkit-animation: spinner 2s infinite ease-in-out;
+          animation: spinner 2s infinite ease-in-out;
+  margin-top: 50px;
+  bottom: 60vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #loader {
+    height: 200vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #loader {
+    height: 200vw;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  100% {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  100% {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+}
+
 .menu-list__entry {
   background-color: white;
   opacity: 0;
@@ -156,8 +263,6 @@ a, address {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: hidden;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
   position: relative;
   height: 70px;
   overflow: hidden;
@@ -236,8 +341,8 @@ a, address {
 }
 
 .menu-entrees > .menu-list__entry:nth-of-type(1) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -245,8 +350,8 @@ a, address {
 }
 
 .menu-plats > .menu-list__entry:nth-of-type(1) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: both;
@@ -254,8 +359,8 @@ a, address {
 }
 
 .menu-desserts > .menu-list__entry:nth-of-type(1) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
   -webkit-animation-fill-mode: both;
@@ -263,8 +368,8 @@ a, address {
 }
 
 .menu-entrees > .menu-list__entry:nth-of-type(2) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-animation-fill-mode: both;
@@ -272,8 +377,8 @@ a, address {
 }
 
 .menu-plats > .menu-list__entry:nth-of-type(2) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
   -webkit-animation-fill-mode: both;
@@ -281,8 +386,8 @@ a, address {
 }
 
 .menu-desserts > .menu-list__entry:nth-of-type(2) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   -webkit-animation-fill-mode: both;
@@ -290,8 +395,8 @@ a, address {
 }
 
 .menu-entrees > .menu-list__entry:nth-of-type(3) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   -webkit-animation-fill-mode: both;
@@ -299,8 +404,8 @@ a, address {
 }
 
 .menu-plats > .menu-list__entry:nth-of-type(3) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   -webkit-animation-fill-mode: both;
@@ -308,8 +413,8 @@ a, address {
 }
 
 .menu-desserts > .menu-list__entry:nth-of-type(3) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
   -webkit-animation-fill-mode: both;
@@ -317,8 +422,8 @@ a, address {
 }
 
 .menu-entrees > .menu-list__entry:nth-of-type(4) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: both;
@@ -326,8 +431,8 @@ a, address {
 }
 
 .menu-plats > .menu-list__entry:nth-of-type(4) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
   -webkit-animation-fill-mode: both;
@@ -335,8 +440,8 @@ a, address {
 }
 
 .menu-desserts > .menu-list__entry:nth-of-type(4) {
-  -webkit-animation: fadein 0.75s;
-          animation: fadein 0.75s;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   -webkit-animation-fill-mode: both;

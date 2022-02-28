@@ -10,7 +10,6 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow: hidden;
-    transform: translateY(100%);
     position: relative;
     height: 70px;
     overflow: hidden;
@@ -62,17 +61,17 @@
 
 @for $i from 1 to 5 {
     .menu-entrees > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein 0.75s;
+        animation: fadein 0.5s;
         animation-delay: #{$i/2}s;
         animation-fill-mode: both;
     }
     .menu-plats > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein 0.75s;
+        animation: fadein 0.5s;
         animation-delay: #{$i/2+1.5}s;
         animation-fill-mode: both;
     }
     .menu-desserts > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein 0.75s;
+        animation: fadein 0.5s;
         animation-delay: #{$i/2+3}s;
         animation-fill-mode: both;
     }

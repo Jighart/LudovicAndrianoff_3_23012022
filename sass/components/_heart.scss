@@ -1,9 +1,11 @@
 .fa-heart {
     &:hover {
-      animation: fill 0.2s ease-out;
-      background:linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      animation: fill 0.5s ease-out;
+      background: linear-gradient(to top, $color-primary, $color-secondary);
       background-clip: text;
       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
     }
   }
 
