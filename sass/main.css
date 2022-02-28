@@ -141,9 +141,13 @@ a, address {
 
 #loader {
   position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: 5;
   width: 100%;
-  height: 300vw;
+  height: 200vw;
   background: #353535;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +171,7 @@ a, address {
 
 #loader .logo {
   position: relative;
-  bottom: 60vw;
+  bottom: 40vw;
 }
 
 #loader .fa-spinner {
@@ -175,7 +179,7 @@ a, address {
   -webkit-animation: spinner 2s infinite ease-in-out;
           animation: spinner 2s infinite ease-in-out;
   margin-top: 50px;
-  bottom: 60vw;
+  bottom: 40vw;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -186,7 +190,7 @@ a, address {
 
 @media screen and (min-width: 992px) {
   #loader {
-    height: 200vw;
+    height: 175vw;
   }
 }
 
