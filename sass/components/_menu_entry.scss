@@ -1,6 +1,7 @@
 .menu-list {
     &__entry {
     background-color: white;
+    opacity: 0;
     margin-bottom: 0.75em;
     border-radius: 1.2em;
     display: flex;
@@ -9,8 +10,10 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow: hidden;
+    transform: translateY(100%);
     position: relative;
     height: 70px;
+    overflow: hidden;
     @include desktop-version {
         height: 60px;
     }
@@ -46,23 +49,31 @@
 @keyframes fadein {
     0% {
         opacity: 0;
+        transform: translateY(150%);
     }
     50% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @for $i from 1 to 5 {
     .menu-entrees > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein #{$i}s;
+        animation: fadein 0.75s;
+        animation-delay: #{$i/2}s;
+        animation-fill-mode: both;
     }
     .menu-plats > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein #{$i+3}s;
+        animation: fadein 0.75s;
+        animation-delay: #{$i/2+1.5}s;
+        animation-fill-mode: both;
     }
     .menu-desserts > .menu-list__entry:nth-of-type(#{$i}) {
-        animation: fadein #{$i+6}s;
+        animation: fadein 0.75s;
+        animation-delay: #{$i/2+3}s;
+        animation-fill-mode: both;
     }
 }
