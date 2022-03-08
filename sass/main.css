@@ -18,6 +18,8 @@ a, address {
 
 * {
   font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .logo {
@@ -113,8 +115,8 @@ a, address {
 .fa-heart:hover {
   -webkit-animation: fill 0.5s ease-out;
           animation: fill 0.5s ease-out;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -509,8 +511,8 @@ a, address {
   font-size: 2em;
   height: 2em;
   line-height: 2em;
-  -webkit-box-shadow: 0px 0px 6px black;
-          box-shadow: 0px 0px 6px black;
+  -webkit-box-shadow: 0px 4px 4px -4px black;
+          box-shadow: 0px 4px 4px -4px black;
 }
 
 .header__location {
@@ -673,6 +675,14 @@ h2 {
 .fonctionnement ol li .fas {
   position: relative;
   right: 0.8em;
+}
+
+.fonctionnement ol li:hover {
+  background-color: #F4EDFF;
+}
+
+.fonctionnement ol li:hover .fas {
+  color: #9356DC;
 }
 
 .fonctionnement ol li:before {

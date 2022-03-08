@@ -30,6 +30,12 @@ h2 {
             position: relative;
             right: 0.8em;
         }
+        &:hover {
+            background-color: $color-background-primary;
+            & .fas {
+                color: $color-primary;
+            }
+        }
     }
     & li:before {
         position: relative;

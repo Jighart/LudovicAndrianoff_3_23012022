@@ -1,7 +1,7 @@
 .fa-heart {
     &:hover {
       animation: fill 0.5s ease-out;
-      background: linear-gradient(to top, $color-primary, $color-secondary);
+      background: linear-gradient(to bottom, $color-primary, $color-secondary);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
